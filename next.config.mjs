@@ -3,8 +3,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/wedding-evite",
-  assetPrefix: "/wedding-evite/",
 }
 
 export default nextConfig
