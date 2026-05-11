@@ -45,7 +45,7 @@ export function RSVPForm() {
 
     if (!formData.attendance) return
 
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbyJHr8ADh-JN53xi1BjofSPvdSIsU1l_KCzcBTTD4KCiX2GYUanbKxSDh1jiF8kwaH5/exec"
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbyKGOzLU0W-61vRIMS6V1gswZZZi4Zv40ivtutnDTkCSNvLxSs34Eu16-zlL8hIePBU/exec"
 
     if (!scriptUrl) {
       alert("RSVP is not configured yet. Please add NEXT_PUBLIC_RSVP_SCRIPT_URL before publishing.")
