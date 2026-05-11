@@ -10,6 +10,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,11 +22,13 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
-      - run: npm install
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
 
-      - run: npm run build
+      - name: Build static site
+        run: npm run build
         env:
           NEXT_PUBLIC_RSVP_SCRIPT_URL: ${{ secrets.NEXT_PUBLIC_RSVP_SCRIPT_URL }}
 
@@ -33,7 +38,6 @@ jobs:
 
   deploy:
     needs: build
-
     runs-on: ubuntu-latest
 
     environment:
