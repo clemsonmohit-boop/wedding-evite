@@ -104,7 +104,7 @@ export function RSVPForm() {
           <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">RSVP</h2>
           <OrnamentalDivider className="mb-6" />
           <p className="text-muted-foreground">
-            Kindly respond by June 15, 2026
+            Kindly respond by June 30, 2026
           </p>
         </motion.div>
 
